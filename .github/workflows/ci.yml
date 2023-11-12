@@ -5,8 +5,8 @@ jobs:
   check-application:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 # Baixa os arquivos do push no ubuntu
-      - uses: actions/setup-go@v2 # repository/actionName
+      - uses: actions/checkout@v3 # Baixa os arquivos do push no ubuntu
+      - uses: actions/setup-go@v3 # repository/actionName
         with:
           go-version: 1.15 # Setando versao do GO
       - run: go test # Rodando comandos
