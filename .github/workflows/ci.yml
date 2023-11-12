@@ -8,6 +8,6 @@ jobs:
       - uses: actions/checkout@v3 # Baixa os arquivos do push no ubuntu
       - uses: actions/setup-go@v3 # repository/actionName
         with:
-          go-version: 1.15 # Setando versao do GO
+          go-version: 1.23 # Setando versao do GO
       - run: go test # Rodando comandos
       - run: go run math.go
