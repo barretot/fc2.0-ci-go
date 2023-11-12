@@ -1,0 +1,13 @@
+name: ci-golang-workflow
+on: [push]
+
+jobs:
+  check-application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v2 # Baixa os arquivos do push no ubuntu
+      - uses: action/setup-go@v2 # repository/actionName
+        with:
+          go-version: 1.15 # Setando versao do GO
+      - run: go test # Rodando comandos
+      - run: go run math.go
